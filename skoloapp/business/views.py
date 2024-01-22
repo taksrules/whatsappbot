@@ -23,7 +23,6 @@ def whatsAppWebhook(request):
             return HttpResponse('error', status=403)
     if request.method=='POST':
         data= json.loads(request.body)
-        sendWhatAppMessage("263781798350", data)
         if 'object' in data and 'entry' in data:
             if data['object'] == 'whatsapp_business_account':
                 try:
@@ -39,7 +38,7 @@ def whatsAppWebhook(request):
                         
                         phoneNumber="263781798350"
                         message= 'RE: {} received'.format(text)
-                        sendWhatAppMessage(phoneNumber, data)
+                        sendWhatAppMessage(phoneNumber, message=message)
                 except:
                     pass
         
