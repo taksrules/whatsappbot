@@ -38,7 +38,7 @@ def whatsAppWebhook(request):
                         
                         phoneNumber="263781798350"
                         message= 'RE: {} received'.format(text)
-                        sendWhatAppMessage(phoneNumber, message)
+                        sendWhatAppMessage(phoneNumber, data)
                 except:
                     pass
         

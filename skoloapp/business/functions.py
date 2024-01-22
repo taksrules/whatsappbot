@@ -15,6 +15,3 @@ def sendWhatAppMessage(phoneNumber, message):
     
     
     
-phoneNumber="263781798350"
-message= "Hello there, \n This is it the first Link up"
-sendWhatAppMessage(phoneNumber, message)
