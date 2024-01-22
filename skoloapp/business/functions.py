@@ -11,9 +11,10 @@ def sendWhatAppMessage(phoneNumber, message):
               }
     response = requests.post(settings.WHATSAPP_URL, headers=headers,json=payload)
     ans= response.json()
+    return ans
     
     
     
-phoneNumber="0781798350"
+phoneNumber="263781798350"
 message= "Hello there, \n This is it the first Link up"
 sendWhatAppMessage(phoneNumber, message)
